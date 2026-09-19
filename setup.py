@@ -6,6 +6,9 @@ import os
 import subprocess
 import time
 
+with open('VERSION', 'r') as f:
+    __version__ = f.read().strip()
+
 version_file = 'basicsr/version.py'
 
 
