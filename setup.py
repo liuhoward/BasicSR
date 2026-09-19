@@ -6,9 +6,6 @@ import os
 import subprocess
 import time
 
-with open('VERSION', 'r') as f:
-    __version__ = f.read().strip()
-
 version_file = 'basicsr/version.py'
 
 
@@ -79,7 +76,7 @@ version_info = ({})
 def get_version():
     with open(version_file, 'r') as f:
         exec(compile(f.read(), version_file, 'exec'))
-    return locals()['__version__']
+    return '1.4.2'
 
 
 def make_cuda_ext(name, module, sources, sources_cuda=None):
@@ -166,6 +163,12 @@ if __name__ == '__main__':
             'Programming Language :: Python :: 3',
             'Programming Language :: Python :: 3.7',
             'Programming Language :: Python :: 3.8',
+            'Programming Language :: Python :: 3.9',
+            'Programming Language :: Python :: 3.10',
+            'Programming Language :: Python :: 3.11',
+            'Programming Language :: Python :: 3.12',
+            'Programming Language :: Python :: 3.13',
+            'Programming Language :: Python :: 3.14',
         ],
         license='Apache License 2.0',
         setup_requires=['cython', 'numpy', 'torch'],
